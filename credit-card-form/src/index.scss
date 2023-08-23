@@ -33,3 +33,13 @@ html {
 a {
   text-decoration: none;
 }
+
+.container {
+  padding: 120px 150px;
+}
+
+@media screen and (max-width: $mobile-width) {
+  .container {
+    padding: 30px 20px;
+  }
+}

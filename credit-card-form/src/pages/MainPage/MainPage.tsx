@@ -2,7 +2,7 @@ import Form from "../../components/Form/Form";
 
 const MainPage = () => {
   return (
-    <div>
+    <div className="container">
       <Form />
     </div>
   );
