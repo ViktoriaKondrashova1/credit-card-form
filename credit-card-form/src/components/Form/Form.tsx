@@ -4,22 +4,33 @@ import "./Form.scss";
 const Form = () => {
   return (
     <form className="form">
-      <h3 className="form__title">cardholder name</h3>
-      <BaseInput />
-      <h3 className="form__title">card number</h3>
-      <BaseInput />
+      <BaseInput
+        type="text"
+        title="cardholder name"
+        placeholder="e.g. Jane Appleseed"
+      />
+      <BaseInput
+        type="number"
+        title="card number"
+        placeholder="e.g. 1234 5678 9123 0000"
+      />
       <div className="form__info">
-        <>
-          <h3 className="form__title">exp. date (mm/yy)</h3>
-          <BaseInput />
-          <BaseInput />
-        </>
-        <>
-          <h3 className="form__title">cvc</h3>
-          <BaseInput />
-        </>
+        <div>
+          <BaseInput
+            type="number"
+            title="exp. date (mm/yy)"
+            inputClass="date-input"
+            placeholder="MM"
+          />
+          <BaseInput type="number" inputClass="date-input" placeholder="YY" />
+        </div>
+        <div>
+          <BaseInput type="number" title="cvc" placeholder="e.g. 123" />
+        </div>
       </div>
-      <button type="submit">Confirm</button>
+      <button type="submit" className="form__submit">
+        Confirm
+      </button>
     </form>
   );
 };

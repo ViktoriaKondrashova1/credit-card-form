@@ -1,0 +1,21 @@
+@import "../../../variables.scss";
+
+.base-input {
+  box-sizing: border-box;
+  height: 45px;
+  border-radius: 10px;
+  border: $light-grayish-violet 2px solid;
+  padding: 10px;
+  cursor: pointer;
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 0;
+  }
+
+  &::placeholder {
+    font-weight: 20px;
+    color: $light-grayish-violet;
+  }
+}
