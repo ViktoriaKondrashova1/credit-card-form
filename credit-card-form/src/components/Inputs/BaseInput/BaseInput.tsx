@@ -5,9 +5,16 @@ interface IBaseInput {
   inputClass?: string;
   placeholder: string;
   title?: string;
+  onChange: (e: React.FormEvent<HTMLInputElement>) => void;
 }
 
-const BaseInput = ({ type, inputClass, placeholder, title }: IBaseInput) => {
+const BaseInput = ({
+  type,
+  inputClass,
+  placeholder,
+  title,
+  onChange,
+}: IBaseInput) => {
   const classes = `base-input ${inputClass}`;
 
   return (
@@ -17,6 +24,7 @@ const BaseInput = ({ type, inputClass, placeholder, title }: IBaseInput) => {
         type={type}
         className={classes}
         placeholder={placeholder}
+        onChange={onChange}
         required
       />
     </>

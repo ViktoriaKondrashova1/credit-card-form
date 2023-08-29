@@ -31,8 +31,7 @@
   }
 
   &__num {
-    margin: 0;
-    margin-top: auto;
+    margin: auto 0 20px 0;
     font-size: 30px;
     letter-spacing: 4px;
   }
@@ -42,9 +41,15 @@
     justify-content: space-between;
   }
 
+  &__exp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+  }
+
   &__info {
     margin: 0;
-    margin-top: 20px;
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
