@@ -5,6 +5,9 @@
   display: flex;
 
   &__cards {
+    display: flex;
+    flex-direction: column;
     margin: auto 0;
+    gap: 30px;
   }
 }
