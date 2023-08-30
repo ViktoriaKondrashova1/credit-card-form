@@ -1,11 +1,5 @@
+import { ICardFront } from "../../types";
 import "./CardFront.scss";
-
-interface ICardFront {
-  number: string;
-  name: string;
-  month: string;
-  year: string;
-}
 
 const CardFront = ({ number, name, month, year }: ICardFront) => {
   return (

@@ -1,8 +1,5 @@
+import { ICardBack } from "../../types";
 import "./CardBack.scss";
-
-interface ICardBack {
-  cvc: string;
-}
 
 const CardBack = ({ cvc }: ICardBack) => {
   return (

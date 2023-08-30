@@ -1,32 +1,45 @@
+import { FieldValues } from "react-hook-form";
+import { IBaseInput } from "../../../types";
 import "./BaseInput.scss";
 
-interface IBaseInput {
-  type: string;
-  inputClass?: string;
-  placeholder: string;
-  title?: string;
-  onChange: (e: React.FormEvent<HTMLInputElement>) => void;
-}
-
-const BaseInput = ({
-  type,
+const BaseInput = <T extends FieldValues>({
+  name,
   inputClass,
   placeholder,
   title,
   onChange,
-}: IBaseInput) => {
+  length,
+  register,
+  errors,
+}: IBaseInput<T>) => {
   const classes = `base-input ${inputClass}`;
 
   return (
     <>
       {title && <h3 className="base-input__title">{title}</h3>}
       <input
-        type={type}
         className={classes}
         placeholder={placeholder}
+        {...register(name, {
+          required: "Can't be blank",
+          minLength: {
+            value: length,
+            message: `Value should be ${length} chars`,
+          },
+          maxLength: {
+            value: length,
+            message: `Value should be ${length} chars`,
+          },
+          validate: (value) =>
+            !Number.isNaN(Number(value)) || "Wrong format, numbers only",
+        })}
         onChange={onChange}
-        required
       />
+      {errors[name] && (
+        <p role="alert" className="base-input__error">
+          {errors[name]?.message?.toString()}
+        </p>
+      )}
     </>
   );
 };
