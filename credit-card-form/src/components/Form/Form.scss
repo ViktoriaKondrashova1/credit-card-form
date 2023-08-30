@@ -5,17 +5,12 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;
 
   &__info {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
   }
-
-  //   &__date__wrap {
-  //     display: flex;
-  //     gap: 7px;
-  //   }
 
   &__submit {
     background-color: $very-dark-violet;
@@ -26,7 +21,15 @@
     color: $light-grayish-violet;
     font-size: 16px;
     font-weight: 500;
+    margin-top: 20px;
     cursor: pointer;
+
+    &:hover {
+      background-color: transparent;
+      border: 2px solid $very-dark-violet;
+      color: $very-dark-violet;
+      transition: all 0.3s ease-out;
+    }
   }
 }
 
