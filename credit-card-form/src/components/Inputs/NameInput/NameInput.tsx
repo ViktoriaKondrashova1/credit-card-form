@@ -9,7 +9,9 @@ const NameInput = <T extends FieldValues>({
 }: INameInput<T>) => {
   return (
     <>
-      <h3 className="base-input__title">cardholder name</h3>
+      <label htmlFor={name} className="base-input__title">
+        cardholder name
+      </label>
       <input
         type="text"
         className="base-input"

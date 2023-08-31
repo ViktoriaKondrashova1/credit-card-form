@@ -15,18 +15,19 @@ const BaseInput = <T extends FieldValues>({
   const classes = `base-input ${inputClass}`;
 
   return (
-    <>
-      {title && <h3 className="base-input__title">{title}</h3>}
+    <div>
+      {title && (
+        <label htmlFor={name} className="base-input__title">
+          {title}
+        </label>
+      )}
       <input
+        maxLength={length}
         className={classes}
         placeholder={placeholder}
         {...register(name, {
           required: "Can't be blank",
           minLength: {
-            value: length,
-            message: `Value should be ${length} chars`,
-          },
-          maxLength: {
             value: length,
             message: `Value should be ${length} chars`,
           },
@@ -40,7 +41,7 @@ const BaseInput = <T extends FieldValues>({
           {errors[name]?.message?.toString()}
         </p>
       )}
-    </>
+    </div>
   );
 };
 

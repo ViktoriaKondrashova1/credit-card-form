@@ -41,25 +41,31 @@ const Form = ({
       />
       <div className="form__info">
         <div>
-          <BaseInput
-            title="exp. date (mm/yy)"
-            inputClass="date-input"
-            placeholder="MM"
-            onChange={(e: React.FormEvent<HTMLInputElement>) => monthChange(e)}
-            name="month"
-            length={2}
-            register={register}
-            errors={errors}
-          />
-          <BaseInput
-            inputClass="date-input"
-            placeholder="YY"
-            onChange={(e: React.FormEvent<HTMLInputElement>) => yearChange(e)}
-            name="year"
-            length={2}
-            register={register}
-            errors={errors}
-          />
+          <label htmlFor="month" className="base-input__title">
+            exp. date (mm/yy)
+          </label>
+          <div className="form__exp-wrap">
+            <BaseInput
+              inputClass="date-input"
+              placeholder="MM"
+              onChange={(e: React.FormEvent<HTMLInputElement>) =>
+                monthChange(e)
+              }
+              name="month"
+              length={2}
+              register={register}
+              errors={errors}
+            />
+            <BaseInput
+              inputClass="date-input"
+              placeholder="YY"
+              onChange={(e: React.FormEvent<HTMLInputElement>) => yearChange(e)}
+              name="year"
+              length={2}
+              register={register}
+              errors={errors}
+            />
+          </div>
         </div>
         <div>
           <BaseInput

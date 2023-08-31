@@ -12,6 +12,10 @@
     gap: 10px;
   }
 
+  &__exp-wrap {
+    display: flex;
+  }
+
   &__submit {
     background-color: $very-dark-violet;
     box-sizing: border-box;
