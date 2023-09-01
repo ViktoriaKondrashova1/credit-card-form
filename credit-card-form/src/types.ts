@@ -30,6 +30,7 @@ export interface IForm {
   monthChange: (e: React.FormEvent<HTMLInputElement>) => void;
   yearChange: (e: React.FormEvent<HTMLInputElement>) => void;
   cvcChange: (e: React.FormEvent<HTMLInputElement>) => void;
+  successSubmit: () => void;
 }
 
 export interface IFormInputs {

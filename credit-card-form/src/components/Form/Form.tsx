@@ -10,6 +10,7 @@ const Form = ({
   monthChange,
   yearChange,
   cvcChange,
+  successSubmit,
 }: IForm) => {
   const {
     register,
@@ -20,10 +21,8 @@ const Form = ({
     reValidateMode: "onSubmit",
   });
 
-  const onSubmit = () => {};
-
   return (
-    <form className="form" onSubmit={handleSubmit(onSubmit)}>
+    <form className="form" onSubmit={handleSubmit(successSubmit)}>
       <NameInput
         onChange={(e: React.FormEvent<HTMLInputElement>) => nameChange(e)}
         name="name"
