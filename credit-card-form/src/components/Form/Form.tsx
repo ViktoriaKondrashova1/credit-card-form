@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { IForm, IFormInputs } from "../../types";
 import NameInput from "../Inputs/NameInput/NameInput";
 import BaseInput from "../Inputs/BaseInput/BaseInput";
+import Button from "../Button/Button";
 import "./Form.scss";
 
 const Form = ({
@@ -80,9 +81,7 @@ const Form = ({
           />
         </div>
       </div>
-      <button type="submit" className="form__submit">
-        Confirm
-      </button>
+      <Button type="submit">Confirm</Button>
     </form>
   );
 };

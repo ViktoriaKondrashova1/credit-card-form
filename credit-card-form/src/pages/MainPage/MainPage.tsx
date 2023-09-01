@@ -21,7 +21,7 @@ const MainPage = () => {
         <CardBack cvc={cvc} />
       </div>
       {success ? (
-        <Success />
+        <Success handleClick={() => setSuccess(false)} />
       ) : (
         <Form
           nameChange={(e) => setName(e.currentTarget.value)}

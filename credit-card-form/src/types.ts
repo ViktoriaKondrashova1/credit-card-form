@@ -5,6 +5,16 @@ import {
   Path,
 } from "react-hook-form";
 
+export interface ISuccess {
+  handleClick: () => void;
+}
+
+export interface IButton {
+  children: React.ReactNode;
+  type: "button" | "submit" | "reset" | undefined;
+  onClick?: () => void;
+}
+
 export interface INameInput<T extends FieldValues> {
   onChange: (e: React.FormEvent<HTMLInputElement>) => void;
   register: UseFormRegister<T>;

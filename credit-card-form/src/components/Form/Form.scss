@@ -15,26 +15,6 @@
   &__exp-wrap {
     display: flex;
   }
-
-  &__submit {
-    background-color: $very-dark-violet;
-    box-sizing: border-box;
-    height: 45px;
-    border-radius: 10px;
-    border: none;
-    color: $light-grayish-violet;
-    font-size: 16px;
-    font-weight: 500;
-    margin-top: 20px;
-    cursor: pointer;
-
-    &:hover {
-      background-color: transparent;
-      border: 2px solid $very-dark-violet;
-      color: $very-dark-violet;
-      transition: all 0.3s ease-out;
-    }
-  }
 }
 
 .date-input {
