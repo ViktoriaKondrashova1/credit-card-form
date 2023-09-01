@@ -21,6 +21,7 @@ export interface IBaseInput<T extends FieldValues> {
   errors: FieldErrors<T>;
   length: number;
   name: Path<T>;
+  pattern?: RegExp | undefined;
 }
 
 export interface IForm {

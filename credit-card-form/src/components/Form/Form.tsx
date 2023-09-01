@@ -55,6 +55,7 @@ const Form = ({
               length={2}
               register={register}
               errors={errors}
+              pattern={/^(?:1[0-2]|0[1-9])$/i}
             />
             <BaseInput
               inputClass="date-input"
@@ -64,6 +65,7 @@ const Form = ({
               length={2}
               register={register}
               errors={errors}
+              pattern={/^(?:[2-9][3-9])$/i}
             />
           </div>
         </div>

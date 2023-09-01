@@ -11,6 +11,7 @@ const BaseInput = <T extends FieldValues>({
   length,
   register,
   errors,
+  pattern,
 }: IBaseInput<T>) => {
   const classes = `base-input ${inputClass}`;
 
@@ -31,8 +32,10 @@ const BaseInput = <T extends FieldValues>({
             value: length,
             message: `Value should be ${length} chars`,
           },
-          validate: (value) =>
-            !Number.isNaN(Number(value)) || "Wrong format, numbers only",
+          pattern: {
+            value: pattern || /^\d+$/,
+            message: "Wrong format",
+          },
         })}
         onChange={onChange}
       />
