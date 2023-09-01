@@ -4,33 +4,63 @@ import CardFront from "../../components/CardFront/CardFront";
 import CardBack from "../../components/CardBack/CardBack";
 import Success from "../../components/Success/Success";
 import { sep } from "../../helpers";
+import { ICardData } from "../../types";
 import "./MainPage.scss";
 
 const MainPage = () => {
-  const [number, setNumber] = useState<string>("0000 0000 0000 0000");
-  const [name, setName] = useState<string>("jane applessed");
-  const [month, setMonth] = useState<string>("00");
-  const [year, setYear] = useState<string>("00");
-  const [cvc, setCvc] = useState<string>("000");
+  const [cardData, setCardData] = useState<ICardData>({
+    name: "jane applessed",
+    number: "0000 0000 0000 0000",
+    month: "00",
+    year: "00",
+    cvc: "000",
+  });
   const [success, setSuccess] = useState<boolean>(false);
+
+  const pressContinue = () => {
+    setSuccess(false);
+    setCardData({
+      name: "jane applessed",
+      number: "0000 0000 0000 0000",
+      month: "00",
+      year: "00",
+      cvc: "000",
+    });
+  };
 
   return (
     <div className="container main">
       <div className="main__cards">
-        <CardFront number={number} name={name} month={month} year={year} />
-        <CardBack cvc={cvc} />
+        <CardFront
+          number={cardData.number}
+          name={cardData.name}
+          month={cardData.month}
+          year={cardData.year}
+        />
+        <CardBack cvc={cardData.cvc} />
       </div>
       {success ? (
-        <Success handleClick={() => setSuccess(false)} />
+        <Success handleClick={pressContinue} />
       ) : (
         <Form
-          nameChange={(e) => setName(e.currentTarget.value)}
-          numberChange={(e) =>
-            setNumber(sep(e.currentTarget.value, 4).join(" "))
+          nameChange={(e) =>
+            setCardData({ ...cardData, name: e.currentTarget.value })
           }
-          monthChange={(e) => setMonth(e.currentTarget.value)}
-          yearChange={(e) => setYear(e.currentTarget.value)}
-          cvcChange={(e) => setCvc(e.currentTarget.value)}
+          numberChange={(e) =>
+            setCardData({
+              ...cardData,
+              number: sep(e.currentTarget.value, 4).join(" "),
+            })
+          }
+          monthChange={(e) =>
+            setCardData({ ...cardData, month: e.currentTarget.value })
+          }
+          yearChange={(e) =>
+            setCardData({ ...cardData, year: e.currentTarget.value })
+          }
+          cvcChange={(e) =>
+            setCardData({ ...cardData, cvc: e.currentTarget.value })
+          }
           successSubmit={() => setSuccess(true)}
         />
       )}

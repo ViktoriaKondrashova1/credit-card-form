@@ -61,3 +61,7 @@ export interface ICardFront {
   month: string;
   year: string;
 }
+
+export interface ICardData extends ICardFront {
+  cvc: string;
+}
