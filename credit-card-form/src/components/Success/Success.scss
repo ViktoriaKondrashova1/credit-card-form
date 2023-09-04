@@ -1,0 +1,30 @@
+@import "../../variables.scss";
+
+.success {
+  width: 100%;
+  padding: 0 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__icon {
+    width: 80px;
+    height: 80px;
+    background-image: url(../../assets/svg/icon-complete.svg);
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
+  &__text {
+    color: $dark-grayish-violet;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+  }
+}

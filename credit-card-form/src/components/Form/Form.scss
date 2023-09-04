@@ -1,0 +1,23 @@
+@import "../../variables.scss";
+
+.form {
+  max-width: 380px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__exp-wrap {
+    display: flex;
+  }
+}
+
+.date-input {
+  width: 70px;
+  margin-right: 7px;
+}
