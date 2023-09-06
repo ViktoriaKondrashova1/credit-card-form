@@ -27,3 +27,15 @@
     margin-bottom: 0;
   }
 }
+
+@media screen and (max-width: $tablet-width) {
+  .base-input {
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: $tablet2-width) {
+  .base-input {
+    height: 45px;
+  }
+}
