@@ -28,7 +28,7 @@
   .main {
     flex-direction: column;
     background-position: top;
-    background-size: 100% 400px;
+    background-size: 100% 320px;
 
     &__cards {
       position: relative;
@@ -41,6 +41,8 @@
 
 @media screen and (max-width: $mobile-width) {
   .main {
+    background-size: 100% 210px;
+
     &__cards {
       width: 340px;
     }
