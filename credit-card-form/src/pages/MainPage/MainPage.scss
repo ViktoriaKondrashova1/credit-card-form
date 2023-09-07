@@ -1,12 +1,50 @@
+@import "../../variables.scss";
+
 .main {
   background-image: url(../../assets/png/bg-main-desktop.png);
   background-repeat: no-repeat;
   display: flex;
+  gap: 20px;
 
   &__cards {
     display: flex;
     flex-direction: column;
     margin: auto 0;
     gap: 30px;
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  .main {
+    gap: 40px;
+
+    &__cards {
+      gap: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet2-width) {
+  .main {
+    flex-direction: column;
+    background-position: top;
+    background-size: 100% 320px;
+
+    &__cards {
+      position: relative;
+      width: 440px;
+      margin: auto;
+      gap: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .main {
+    background-size: 100% 210px;
+
+    &__cards {
+      width: 340px;
+    }
   }
 }

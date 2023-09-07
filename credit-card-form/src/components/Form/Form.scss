@@ -21,3 +21,30 @@
   width: 70px;
   margin-right: 7px;
 }
+
+@media screen and (max-width: $tablet-width) {
+  .form {
+    max-width: 250px;
+  }
+
+  .date-input {
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: $tablet2-width) {
+  .form {
+    max-width: 100%;
+    margin-top: 300px;
+  }
+
+  .date-input {
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .form {
+    margin-top: 210px;
+  }
+}

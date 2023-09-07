@@ -1,8 +1,8 @@
 @import "../../variables.scss";
 
 .success {
-  width: 100%;
-  padding: 0 170px;
+  width: 400px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,5 +26,19 @@
     font-weight: 600;
     letter-spacing: 2px;
     margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: $tablet2-width) {
+  .success {
+    margin-top: 300px;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .success {
+    margin-top: 210px;
   }
 }

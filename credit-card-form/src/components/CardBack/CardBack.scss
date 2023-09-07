@@ -9,8 +9,36 @@
   color: white;
   background: url(../../assets/png/bg-card-back.png) no-repeat;
   margin-left: 90px;
+  background-size: 100%;
 
   &__cvc {
     margin: auto 30px auto auto;
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  .card-back {
+    width: 350px;
+    height: 192px;
+    padding: 20px;
+
+    &__cvc {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet2-width) {
+  .card-back {
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .card-back {
+    width: 250px;
+    height: 137px;
+    padding: 10px;
   }
 }
