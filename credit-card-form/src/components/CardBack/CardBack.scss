@@ -32,6 +32,13 @@
   .card-back {
     position: absolute;
     z-index: 1;
-    top: 40px;
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .card-back {
+    width: 250px;
+    height: 137px;
+    padding: 10px;
   }
 }

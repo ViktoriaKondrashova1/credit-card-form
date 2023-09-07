@@ -87,6 +87,22 @@
   .card-front {
     position: absolute;
     z-index: 2;
-    top: 148px;
+    top: 108px;
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .card-front {
+    width: 250px;
+    height: 137px;
+    padding: 10px;
+
+    &__num {
+      font-size: 14px;
+    }
+
+    &__info {
+      font-size: 10px;
+    }
   }
 }

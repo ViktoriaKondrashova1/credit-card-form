@@ -31,7 +31,18 @@
     background-size: 100% 400px;
 
     &__cards {
-      margin: 0;
+      position: relative;
+      width: 440px;
+      margin: auto;
+      gap: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .main {
+    &__cards {
+      width: 340px;
     }
   }
 }
